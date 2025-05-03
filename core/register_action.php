@@ -15,7 +15,7 @@ if (isset($_POST['submit_btn'])) {
     $email = $_POST['user_email'];
     $password = $_POST['user_pass'];
     $uName = $fName . " " . $lName;
-    $uType = 3;
+    $uType = $_POST['u_type'];
 
     // Check password length
     if (strlen($password) < 8) {

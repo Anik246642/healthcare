@@ -1,7 +1,7 @@
 <?php
-header("Content-Type: text/html; charset=UTF-8");
-error_reporting(E_ALL);
-ini_set('display_errors', 1); // Turn on error reporting for troubleshooting
+    header("Content-Type: text/html; charset=UTF-8");
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1); // Turn on error reporting for troubleshooting
 ?>
 
 <!DOCTYPE html>
@@ -28,7 +28,7 @@ ini_set('display_errors', 1); // Turn on error reporting for troubleshooting
         <div class="text">
             <h2>Your Care, Our Schedule</h2>
             <p>Get clarity into your hormones and fertility with our comprehensive care. Access at-home testing, in-house experts and trusted partner clinics.<br> One life at a time, we make a difference.</p>
-            <a href="core/router.php">Schedule Now →</a>
+            <a href="core/router.php">Schedule Now → </a>
         </div>
         <ul class="social">
             <li><a href="https://www.facebook.com/xodivorce.1"><img src="./assets/images/facebook.png" alt="Facebook" style="height:50px; width:50px; opacity: 0.8;"></a></li>
@@ -36,6 +36,7 @@ ini_set('display_errors', 1); // Turn on error reporting for troubleshooting
             <li><a href="https://www.instagram.com/xodivorce"><img src="./assets/images/instagram.png" alt="Instagram" style="margin-left: -10px; height:50px; width:50px; opacity: 0.8;"></a></li>
         </ul>
     </section>
+
 
     <script type="text/javascript" src="./assets/js/home.js"></script>
     <script type="text/javascript" src="./assets/js/menu.js"></script>

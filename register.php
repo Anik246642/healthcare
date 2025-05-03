@@ -39,8 +39,19 @@ session_start(); // Start the session to access error messages
                         <input type="text" placeholder="Last name" class="input-field" name="l_name">
                     </div>
                     <input type="email" placeholder="Email" class="input-field full-width" name="user_email">
+                    <select name="u_type" id="u_type" class="input-field full-width">
+                        <option value="" disabled selected>----- Select User Type -------</option>
+                        <option value="2">Doctor</option>
+                        <option value="3">Patient</option>
+                    </select>
+                    <div id="doc_reg"></div>
+                  
+                    <!-- Input field for doctor -->
+                    <div id="doctor-input" style="display: none;">
+                        <!-- <label for="doctor-specialization">Enter Doctor's Specialization:</label> -->
+                        <input type="text" id="doc_reg_no" name="doc_reg_no" placeholder="Doctor Registration Number" class="input-field full-width">
+                    </div>
                     
-                    <!-- Password field with eye icon -->
                     <div class="input-container">
                         <input type="password" placeholder="Enter your password" class="input-field full-width" id="password-field" name="user_pass">
                         <img src="assets/images/eye.svg" alt="Show Password" class="eye-icon" id="toggle-password">
@@ -62,16 +73,32 @@ session_start(); // Start the session to access error messages
 
                     <button type="submit" class="submit-button" name="submit_btn">Create account</button>
                 </form>
-                <div class="divider">Or register with</div>
+                <!-- <div class="divider">Or register with</div>
 
                 <div class="social-login">
                     <button class="google-btn"> <img src="assets/images/google.png" alt="Google Logo"> Google</button>
                     <button class="apple-btn"> <img src="assets/images/apple.png" alt="Apple Logo"> Apple</button>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
 
     <script src="assets/js/register.js"></script>
+    <script>
+        // Get the select element and input field
+        const userTypeSelect = document.getElementById("u_type");
+        const doctorInputField = document.getElementById("doctor-input");
+
+        // Listen for the change event on the dropdown
+        userTypeSelect.addEventListener("change", function() {
+            if (userTypeSelect.value === "2") {
+            // Show the input field when "Doctor" is selected
+            doctorInputField.style.display = "block";
+            } else {
+            // Hide the input field if any other option is selected
+            doctorInputField.style.display = "none";
+            }
+        });
+    </script>
 </body>
 </html>

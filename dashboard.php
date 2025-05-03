@@ -56,6 +56,8 @@ ini_set('display_errors', 1);
             <ul class="space-y-4">
                 <!-- Admin Menu -->
                 <?php if ($_SESSION['user_type'] == 1): ?>
+                    <li><a href="?section=doctors" class="block px-4 py-2 hover:bg-blue-600">Home</a></li>
+                    <li><a href="?section=admin_manage_appointments" class="block px-4 py-2 hover:bg-blue-600">User Management</a></li>
                     <li><a href="?section=doctors" class="block px-4 py-2 hover:bg-blue-600">Manage Doctors</a></li>
                     <li><a href="?section=patients" class="block px-4 py-2 hover:bg-blue-600">Manage Patients</a></li>
                     <li><a href="?section=admin_manage_appointments" class="block px-4 py-2 hover:bg-blue-600">Manage Appointments</a></li>

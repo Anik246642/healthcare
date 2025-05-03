@@ -11,11 +11,14 @@ if ($user_type === null) {
 }
 
 // Check if the user is allowed to access the dashboard (user_type 1, 2, or 3)
-if ($user_type >= 1 && $user_type <= 3) {
+if ($user_type >= 1 && $user_type <= 3) 
+{
     // Redirect allowed users to dashboard.php
     header('Location: ../dashboard.php');
     exit();  // Stop further execution
-} else {
+} 
+else 
+{
     // Redirect banned or unauthorized users to login.php
     $_SESSION['error'] = "You do not have permission to access the dashboard.";
     header('Location: ../login.php');
